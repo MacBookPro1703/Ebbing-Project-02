@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ebbing Project GmbH – Generalunternehmer Ladenbau</title>
+<meta name="description" content="Ebbing Project GmbH inszeniert Räume nach individuellen Marken-, Handels- und Unternehmenskonzepten – als Generalunternehmer für Ladenbau, Innenausbau und Projektmanagement.">
+
+<!-- PWA / Home-Screen-Setup (alles eingebettet, keine separaten Dateien nötig) -->
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIkViYmluZyBQcm9qZWN0IEdtYkgiLCAic2hvcnRfbmFtZSI6ICJFYmJpbmcgUHJvamVjdCIsICJkZXNjcmlwdGlvbiI6ICJHZW5lcmFsdW50ZXJuZWhtZXIgTGFkZW5iYXUg4oCTIFLDpHVtZSBuYWNoIGluZGl2aWR1ZWxsZW4gTWFya2VuLSwgSGFuZGVscy0gdW5kIFVudGVybmVobWVuc2tvbnplcHRlbi4iLCAic3RhcnRfdXJsIjogIi4vaW5kZXguaHRtbCIsICJzY29wZSI6ICIuLyIsICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLCAib3JpZW50YXRpb24iOiAicG9ydHJhaXQiLCAiYmFja2dyb3VuZF9jb2xvciI6ICIjMUIxRTIyIiwgInRoZW1lX2NvbG9yIjogIiMxQjFFMjIiLCAibGFuZyI6ICJkZSIsICJpY29ucyI6IFt7InNyYyI6ICJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQWdBQUFBSUFDQUlBQUFCN0drT3RBQUFTaUVsRVFWUjRuTzNkZVhUZGRaM0g0WnZtVHRJVkdFdkxvb3pRZ2xCRUJEbFJPeUtMbEhVUVlSRHJJS0JsR2ZCVUpvNGNjWmM1REZpdEU2Rm9kQmoyY3RoUkF3SUt0Vlp3VUV2YXFnZWRZcHVrZ0VocHVhbDBTWnZjTnMzOFVZNnl0R2t1dmJuZm05L25lZjd5Skp6ay9TWEgrK0ozMTVxV3BxazVBT0xKNTNLNTZiTmFVODlJcHJteHdmRlRyMGpHOFIwLzlZcGt0aHgvV09vWkFLUWhBQUJCQ1FCQVVBSUFFSlFBQUFRbEFBQkI1U3YybTVvYkcvNzZ2eU0vK3dwZ1d5cDhPK2tLQUNBb0FRQUlTZ0FBZ2hJQWdLQUVBQ0FvQVFBSVNnQUFnaElBZ0tBRUFDQW9BUUFJU2dBQWdoSUFnS0FFQUNBb0FRQUlTZ0FBZ2hJQWdLQUVBQ0FvQVFBSVNnQUFnaElBZ0tBRUFDQW9BUUFJU2dBQWdoSUFnS0FFQUNBb0FRQUlLcit0YnpRM05nemVieTN2RDU4K3E3V01QdzFnZ0liNjdhUXJBSUNnQkFBZ0tBRUFDR3FiandHVS9ZNzFWOTZmNVY1N0lBT0crdTJrS3dDQW9BUUFJQ2dCQUFoS0FBQ0NFZ0NBb0FRQUlDZ0JBQWhLQUFDQ0VnQ0FvQVFBSUNnQkFBaEtBQUNDRWdDQW9BUUFJQ2dCQUFoS0FBQ0NFZ0NBb0FRQUlDZ0JBQWhLQUFDQ0VnQ0FvQVFBSUNnQkFBaEtBQUNDRWdDQW9QSVYrMDNUWjdWVzdIY0JERVVWdnAxMEJRQVFsQUFBQkNVQUFFRUpBRUJRTlMxTlV6UDI4R3h6WTBQcUNVQTJaZWJXc3JteFlmcXNWbGNBQUVFSkFFQlFBZ0FRbEFBQUJDVUFBRUZWN3EwZ0V1cm5nZnN0RDRWWGNreFZjWHpIVDcwaW1ZRWNQL05QS1hRRkFCQ1VBQUFFSlFBQVFRa0FRRkFDQUJDVUFBQUVKUUFBUVFrQVFGQTFMVTFUVTI4QUlJRjhMa1B2Y0wzRjYxKzg1NVhBMitMNGpwOTZSVEp2N0pYQW1mazM1dk1BQUVJVEFJQ2dCQUFnS0FFQUNFb0FBSUlTQUlDZ0JBQWdLQUVBQ0VvQUFJSVNBSUNnQkFBZ0tBRUFDRW9BQUlJU0FJQ2dCQUFnS0FFQUNFb0FBSUlTQUlDZ0JBQWdLQUVBQ0VvQUFJSVNBSUNnQkFBZ0tBRUFDRW9BQUlJU0FJQ2dCQUFnS0FFQUNFb0FBSUlTQUlDZ0JBQWdLQUVBQ0VvQUFJSVNBSUNnQkFBZ0tBRUFDRW9BQUlJU0FJQ2dCQUFnS0FFQUNFb0FBSUlTQUlDZ0JBQWdLQUVBQ0VvQUFJSVNBSUNnQkFBZ0tBRUFDRW9BQUlJU0FJQ2dCQUFnS0FFQUNFb0FBSUlTQUlDZ0JBQWdLQUVBQ0VvQUFJSVNBSUNnQkFBZ0tBRUFDRW9BQUlJU0FJQ2dCQUFnS0FFQUNFb0FBSUlTQUlDZ0JBQWdLQUVBQ0VvQUFJSVNBSUNnQkFBZ0tBRUFDRW9BQUlJU0FJQ2dCQUFnS0FFQUNFb0FBSUlTQUlDZ0JBQWdLQUVBQ0VvQUFJSVNBSUNnQkFBZ3FKcVdwcW1wTndDUVFENlh5MDJmMVpwNlJqazFOemE4NWl2OUhMQzVzU0ZqeHkrSjR6dCs2aFhKRE9UNEpkMllEQzFianU4dUlJQ2dCQUFnS0FFQUNFb0FBSUxLcHg0UVJjdTl0eC8wOWttcFYyeEYyMFdwRjVSdThWTkxQbmhhcForOVZyVi93VGRtMDZaTk5YMjlDejdhM2RQVFV5d1dlNHJGWXJHNGZ2MkdRdWVxUXFGUUtIUVdPbGU5V0NnVUNxdGVXTEZpeFlxVnFmY3lLQVFBSXNybjg3bGNmcGRkNmdmeUQ2OWIxOVhlMGJHMHJhT3R2YU85ZmRuU3R2Ym4vdno4WUMra0FnUUEySTdSbzBlOTgrQjN2UFBnZC96MUs0WE96dGJXUmZOYkY3WXVXTFJrYVZ0ZlgxL0NlYnhoQWdDVWJOZXhZMDg4NGRnVFR6ZzJsOHU5dEhyMWdnVy9tVHZ2MFVmbS9HejFtaldwcDFFQ0R3SURPMlNYblhlZWNzeFJNNjY0YlA3amM2Ky85dHVuZmVqazBhTkhwUjdGZ0xnQ0FNb2puODhmZGNUaFJ4MXhlTEZZblBmb0wyNmVmWHZyZ2tXcFI5RWZWd0JBbWRYVjFSMS83REYzM0hyREQrKzU3ZVNUanErdHJVMjlpSzBUQUdDd3ZPT2dBNjl1K3ZxOE9ROU0rL2haZFhWMXFlZndXZ0lBREs0OTk5ajlTNSsvNU9FSHZuL3NNVWVuM3NLckNBQlFDWHZ0OVpidmZlZGJzMis2ZHI5OUo2YmV3c3NFQUtpY2YzenZ1eDlvdWV1TG4vdU1lNFNxZ1FBQUZWVmJXM3Z1Sjg2Kzk4NWI5bjdyUDZUZUVwMEFBQWtjT09tQSszOXd4NGMrZUZMcUlhRUpBSkRHeUpFam0yWmVPZU9LeTl3ZGxJb0FBQ21kY2ZxcE4xLy8zWjNHakVrOUpDSUJBQko3ZDhOaGQ5OXg4N2hkeDZZZUVvNEFBT250TzNIQ2JiT3ZIejl1MTlSRFloRUFvQ3BNMkdmdlcyKyticGRkZGs0OUpCQUJBS3JGeEFsN1gvZTlhNFlQSDlESDFMRGpCQUNvSW9jZWN2Qi9mZjJLMUN1aUVBQ2d1cHh3L0pRTHo1K1dla1VJQWdCVW5VdisvVk1OaDcwcjlZcnNFd0NnNmd3Yk51eWIzL2hQbnl3MjJBUUFxRVp2ZWZPZVg3ajBNNmxYWkp3QUFGWHFJeDgrN2RCRERrNjlJc3NFQUtoU05UVTFsMS8yeFpxYW10UkRNa3NBZ09vMTZZRDlUem41eE5Rck1rc0FnS3IyNllzL21jL25VNi9JSmdFQXF0cGVlNzNsNUpPT1Q3MGltM1FWcXQwTk45MDZZK2EzZHZDSDFOVFUxTmZYRGE4ZlBuTGtpUEhqeCswMmZuemptWk1YdnpqaXdFbjc3enR4UXBYZnozN0JlUjl2dWYvQjFDc3lTQUFnaEw2K3Z1N3VudTd1bnBkV3IzNSsrUXU1WE82VUE5ZGNNcXMxbDh1TkhmdW13OTgzK2JncFJ4OXo5SkhWZVdmTC9tL2I3NzN2YWZqMS9OYlVRN0ttR3YvWWxGYy8vLzNZM05nd2ZaYi9VMFhYMmJucXZ2c2Z2Ty8rQjkvMHByLy95SWRQTzMvYU9WWDRscHhubkg2cUFKU2R4d0NBbDYxYTlaZi8vcDhiajV6eVQ5LzUzblViTjI1TVBlZFZUamh1eXBneG8xT3Z5Qm9CQUY2bHE2dnI2bXUrKzZIVHoveS94VStsM3ZJMzlmVjFIemo2eU5RcnNrWUFnSzFZc3JSdDZwblRIdnJ4STZtSC9NMkp4MDFKUFNGckJBRFl1ZzNkM1kyWGZQNzJPKzlOUGVSbGg3OXZjbDFkWGVvVm1TSUF3RGIxOWZWZGR2blg3cXVPcDJBT0gxNS8yTHNPU2IwaVV3UUE2RTlmWDk4WHYzcDVsVHdlOEw3SjcwazlJVk1FQU5pT25wN2l4WisrdEx1N0ovV1FuQ3VBOGhJQVlQdWVlZlpQMTkxNFMrb1Z1WVBlUHFtMjFxMVcyZmhYQ1F6SXRkZmRXT2pzVEx0aHhJZ1JFL2JaSisyR0xCRUFZRUM2dTN0dXUvM3UxQ3R5KyswM01mV0U3QkFBWUtCdXUvT2UzdDdldEJzbTdyTjMyZ0ZaSWdEQVFLMWE5WmY1clF2VGJ0aEhBTXBIQUlBU3pQbnB2TFFEOXRoanQ3UURza1FBZ0JLMExraDhCYkRIYmdKUU5nSUFsR0JwVy91R0RSc1NEaGczYmx6QzM1NHhBZ0NVb0xkMzg5SzJqb1FENnV2cjZ1dTlJMUI1Q0FCUW1pMGZLSmJRemp2dGxIWkFaZ2dBVUpybHk1ZW5IVEJxMUtpMEF6SkRBSURTckYzWGxYYUFONFV1RndFQVN0TzlvVHZ0Z09yODVQcWhTQUNBMHZRVUU3OHRhRDVmbTNaQVpnZ0FVSnJoOWNQVER0aTBLZkhiVVdTR0FBQ2xHVDRpY1FBMmJ0eVlka0JtQ0FCUW1wM0dqRWs3UUFES1JRQ0EwdXk1NSs1cEI2eGR1eTd0Z013UUFLQTBiOTV6ajdRRDFxeGRtM1pBWmdnQVVJSjhQci92eEFrSkIzUjM5eFNMeFlRRHNrUUFnQkpNT3VCdGFWK0h0WExsaXdsL2U4WUlBRkNDZHpjY2xuYkFDeXRXcEIyUUpWNVFsMzNuVFR2N3ZHbG5iK3U3YlJkVmNzc2I5NE9XSDEzNmhhK21Ya0h1dUNrZlNEdGdlZXEzb3NzU1Z3REFRTzIrKzI2SEhuSncyZzBkVHorVGRrQ1dDQUF3VUdkL2JPcXdZWWx2Tk5vN2xxVWRrQ1VDQUF6STZOR2pQdnFSMDFPdnlDMXRhMDg5SVRzRUFCaVFmNXQrWWZKUFl1bnE2bHEyekYxQVpTTUF3UGJ0LzdiOXpqbnJYMUt2eVAzK0Q0czNiOTZjZWtWMkNBQ3dIU05HakxqbXFwblY4Qzc4Q3hmOU52V0VUQkVBb0QrMXRjT2FabDR4Y2NMZXFZZmtjcm5jNDcrYW4zcENwZ2dBc0UzRGhnMzd4dGN1VC83Yy95MDJkSGN2K3MzdlVxL0lsUFRYZEVCMUdqbHk1TlZOTXo1dzFCR3BoN3pzc1Y4ODdvMmd5OHNWQUxBVkIwNDY0UHQzemE2ZVcvOWNMdmZ3STNOVFQ4Z2FWd0RBcTR3Wk0vckNDODY5NE54emFtdXI2S04zdTd0N2Z2Ynp4MUt2eUJvQkFGNDJidGV4VTgvNDUybWZPQ3Y1OC8xZjd5ZVAvSFRkdXE3VUs3SkdBQ0M2WGNlT2ZmL2hrNDgvOXBpamozcC9WZjFYL3l2ZGZlOFBVMC9JSUFHQUVHcHFhdXJxL3E2K3JuN2txSkc3alIrMzIvanhlNzl6Y3RQTVU5OSs0QUVUSit4VFUxT1RlbUIvRmorMTVJbldoYWxYWkpBQVFMWHIvdzI5ZDhUK2cvRkRCOEgxTjk2U2VrSTJlUllRVU5XZWZmYTVCeDU2T1BXS2JCSUFvS3BkL2Uzdjl2YjJwbDZSVFRVdFRWTlRid2hoOHVsZjJtbmNXMU92R01LZS8rT3ZucHgzVThJQi9vSkpyQ2s4KzZ0N3I4emwrbElQeWFaOExwZWJQcXMxOVl4eWFtNXNlTTFYK2psZ2MyTkRaWTdmOHY3MUI0MnJ3Ty9KckY4dkxseGE3cjlVU1g5OWY4SEs2K3ZyTy9kVFgvN3Q3NTRjakI4K2tMOStTVGNtUTh1VzQ3c0xDS2hTZDkzemcwRzY5V2NMQVFDcTBYTi9mbjdHekt0U3I4ZzRBUUNxenViTm16Lzd1YTkwZFhucDcrQVNBS0RxTkYzMW5kYUZpMUt2eUQ0QkFLckxUeDZaZSszMUtaL3hGWWNBQUZYa3Q3OTc4ck9mKzNMcUZWRUlBRkF0T3BZOWZmNUZGMi9vN2s0OUpBb0JBS3JDc3FlZk9lc1QvL3JTUzZ0VER3bEVBSUQwMnRvN1BuYk8rU3RYdnBoNlNDd0NBQ1RXdW1EUjFET25yWHl4a0hwSU9BSUFwSFRQOTFzK2Z0NG5WNjlaazNwSVJENFBJUHR1dU9uV0dUTy90ZFZ2VmV5dGtPRDExcTlmLzVYL3VQSytIejJVZWtoY0FnQWtzUGlwUDE3ODZVdWZmdWJaMUVOQ0V3Q2dvbnA3TjgrKzdZNXZObDFUTEJaVGI0bE9BSURLK2VXdm43amlhOTljc3JRdDlSQnlPUUVBS3VPNTUvNDhZK1pWRDgrWm0zb0lmeU1Bd09CNmZ2a0xOOCsrL2JZNzd1cnBjWjlQZFJFQVlMRDgvZytMYjdocDlrTS9tZU5EZmF1VEFBQmx0bkhqeHA4LzlyODN6NzU5L2hNTFVtK2hQd0lBbE1lbVRac2UvK1g4QjMvODhKeTU4OWF1WFpkNkR0c25BTUFPV2IxbXpZSUZ2NWs3NzlGSDV2enNwZFhleW0wb0VRQ2daSjJkcTFvWExIcGl3Y0luV2hmK2NVbGJYMTlmNmtXOEVRSUFiTWU2ZFYzdEhjdmEyanZhMjVlMXRYY3NiZS80MDUrZVN6MktNaEFBaUtpM3R6Zlh0Mmx0VjNleHVMSFkwOU5UM0Znc0Z0ZXZYMS9vN0N3VVZoVUtoVUxucWtLaDg4VkNZZmtMSzFhc1dKbDZMNE5DQUtEYTlmTjJmanZDV3dIaTdhQUJnaElBZ0tBRUFDQW9BUUFJU2dBQWdoSUFnS0FFQUNBb0FRQUlTZ0FBZ2hJQWdLQUVBQ0FvQVFBSVNnQUFnaElBZ0tBRUFDQW9BUUFJU2dBQWdoSUFnS0FFQUNBb0FRQUlTZ0FBZ2hJQWdLQUVBQ0NvZk9vQkRMcnpwcDE5M3JTenQvWGR0b3NxdWFYTVRqcmxqQ1ZMMjFLdmdLSEtGUUJBVUFJQUVKUUFBQVFsQUFCQkNRQkFVQUlBRUpRQUFBUWxBQUJCQ1FCQVVBSUFFSlFBQUFRbEFBQkJDUUJBVUFJQUVKUUFBQVFsQUFCQkNRQkFVQUlBRUpRQUFBUWxBQUJCQ1FCQVVBSUFFSlFBQUFRbEFBQkJDUUJBVUFJQUVKUUFBQVFsQUFCQkNRQkFVQUlBRUZRKzlZQW9UdjN3bWFrbmJFVnpZOFAwV2EycFZ3d04xZmtYaEIzaENnQWdLQUVBQ0VvQUFJS3FhV21hbW5vREFBbmtjN2xjeGg0R2JHNXNlTTFYK2psZzhFZEJIZC94VTY5SVppREhMK25HWkdqWmNueDNBUUVFSlFBQVFRa0FRRkFDQUJDVUFBQUVKUUFBUVFrQVFGQUNBQkNVQUFBRTVlMmdLY0hyWHhnNTFHWHZSTGtNdlZxVndlWUtBQ0FvQVFBSVNnQUFnaElBZ0tBRUFDQW9BUUFJU2dBQWd2STZBRXFRc1NlWUIvOUlMSEFGQUJDVUFBQUVKUUFBUVFrQVFGQUNBQkNVQUFBRUpRQUFRUWtBUUZBQ0FCQ1VBQUFFSlFBQVFRa0FRRkFDQUJDVUFBQUVKUUFBUVFrQVFGQUNBQkNVQUFBRUpRQUFRUWtBUUZBQ0FCQ1VBQUFFSlFBQVFRa0FRRkFDQUJDVUFBQUVKUUFBUVFrQVFGQUNBQkNVQUFBRUpRQUFRUWtBUUZBQ0FCQ1VBQUFFSlFBQVFRa0FRRkFDQUJDVUFBQUVKUUFBUVFrQVFGQUNBQkNVQUFBRUpRQUFRUWtBUUZBQ0FCQ1VBQUFFSlFBQVFRa0FRRkFDQUJDVUFBQUVKUUFBUVFrQVFGQUNBQkNVQUFBRUpRQUFRUWtBUUZBQ0FCQ1VBQUFFSlFBQVFRa0FRRkFDQUJDVUFBQUVKUUFBUVFrQVFGQUNBQkJVVFV2VDFOUWJBRWdnbjh2bHBzOXFUVDJqbkpvYkcxN3psWDRPMk56WWtMSGpsOFR4SFQvMWltUUdjdnlTYmt5R2xpM0hkeGNRUUZBQ0FCQ1VBQUFFSlFBQVFRa0FRRkFDQUJDVUFBQUVKUUFBUVFrQVFGQUNBQkJVUHZXQVNuajk2N2tIL3QzTWMvelVFMUp5L05RVEVuTUZBQkNVQUFBRUpRQUFRUWtBUUZBQ0FCQlVCcDhGVk5Jbk52aE1ETWRQdlNJWng0OTgvQzFjQVFBRUpRQUFRUWtBUUZBQ0FCQlU1UjRFZnVXcnJqMzJBdkI2RmI2ZGRBVUFFSlFBQUFRbEFBQkJDUUJBVUFJQUVKUUFBQVFsQUFCQkNRQkFVQUlBRUpRQUFBUWxBQUJCQ1FCQVVBSUFFSlFBQUFRbEFBQkJDUUJBVUFJQUVKUUFBQVFsQUFCQkNRQkFVQUlBRUpRQUFBUWxBQUJCQ1FCQVVBSUFFSlFBQUFTVjM5WTNtaHNiQnUrM2x2ZUhUNS9WV3NhZkJqQkFRLzEyMGhVQVFGQUNBQkNVQUFBRXRjM0hBTXAreC9vcjc4OXlyejJRQVVQOWR0SVZBRUJRQWdBUWxBQUFCQ1VBQUVFSkFFQlFBZ0FRbEFBQUJDVUFBRUVKQUVCUUFnQVFsQUFBQkNVQUFFRUpBRUJRQWdBUWxBQUFCQ1VBQUVFSkFFQlFBZ0FRbEFBQUJDVUFBRUVKQUVCUUFnQVFsQUFBQkNVQUFFRUpBRUJRK1lyOXB1bXpXaXYydXdDR29ncmZUcm9DQUFoS0FBQ0NFZ0NBb0FRQUlLaWFscWFwcVRjQWtFQStGL3Y1T2MyTkRZNmZla1V5anUvNHFWY2tzK1g0L3c4dUN5Y3g1bTE3blFBQUFBQkpSVTVFcmtKZ2dnPT0iLCAic2l6ZXMiOiAiMTkyeDE5MiIsICJ0eXBlIjogImltYWdlL3BuZyIsICJwdXJwb3NlIjogImFueSBtYXNrYWJsZSJ9LCB7InNyYyI6ICJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQWdBQUFBSUFDQUlBQUFCN0drT3RBQUFTaUVsRVFWUjRuTzNkZVhUZGRaM0g0WnZtVHRJVkdFdkxvb3pRZ2xCRUJEbFJPeUtMbEhVUVlSRHJJS0JsR2ZCVUpvNGNjWmM1REZpdEU2Rm9kQmoyY3RoUkF3SUt0Vlp3VUV2YXFnZWRZcHVrZ0VocHVhbDBTWnZjTnMzOFVZNnl0R2t1dmJuZm05L25lZjd5Skp6ay9TWEgrK0ozMTVxV3BxazVBT0xKNTNLNTZiTmFVODlJcHJteHdmRlRyMGpHOFIwLzlZcGt0aHgvV09vWkFLUWhBQUJCQ1FCQVVBSUFFSlFBQUFRbEFBQkI1U3YybTVvYkcvNzZ2eU0vK3dwZ1d5cDhPK2tLQUNBb0FRQUlTZ0FBZ2hJQWdLQUVBQ0FvQVFBSVNnQUFnaElBZ0tBRUFDQW9BUUFJU2dBQWdoSUFnS0FFQUNBb0FRQUlTZ0FBZ2hJQWdLQUVBQ0FvQVFBSVNnQUFnaElBZ0tBRUFDQW9BUUFJU2dBQWdoSUFnS0FFQUNBb0FRQUlLcit0YnpRM05nemVieTN2RDU4K3E3V01QdzFnZ0liNjdhUXJBSUNnQkFBZ0tBRUFDR3FiandHVS9ZNzFWOTZmNVY1N0lBT0crdTJrS3dDQW9BUUFJQ2dCQUFoS0FBQ0NFZ0NBb0FRQUlDZ0JBQWhLQUFDQ0VnQ0FvQVFBSUNnQkFBaEtBQUNDRWdDQW9BUUFJQ2dCQUFoS0FBQ0NFZ0NBb0FRQUlDZ0JBQWhLQUFDQ0VnQ0FvQVFBSUNnQkFBaEtBQUNDRWdDQW9QSVYrMDNUWjdWVzdIY0JERVVWdnAxMEJRQVFsQUFBQkNVQUFFRUpBRUJRTlMxTlV6UDI4R3h6WTBQcUNVQTJaZWJXc3JteFlmcXNWbGNBQUVFSkFFQlFBZ0FRbEFBQUJDVUFBRUZWN3EwZ0V1cm5nZnN0RDRWWGNreFZjWHpIVDcwaW1ZRWNQL05QS1hRRkFCQ1VBQUFFSlFBQVFRa0FRRkFDQUJDVUFBQUVKUUFBUVFrQVFGQTFMVTFUVTI4QUlJRjhMa1B2Y0wzRjYxKzg1NVhBMitMNGpwOTZSVEp2N0pYQW1mazM1dk1BQUVJVEFJQ2dCQUFnS0FFQUNFb0FBSUlTQUlDZ0JBQWdLQUVBQ0VvQUFJSVNBSUNnQkFBZ0tBRUFDRW9BQUlJU0FJQ2dCQUFnS0FFQUNFb0FBSUlTQUlDZ0JBQWdLQUVBQ0VvQUFJSVNBSUNnQkFBZ0tBRUFDRW9BQUlJU0FJQ2dCQUFnS0FFQUNFb0FBSUlTQUlDZ0JBQWdLQUVBQ0VvQUFJSVNBSUNnQkFBZ0tBRUFDRW9BQUlJU0FJQ2dCQUFnS0FFQUNFb0FBSUlTQUlDZ0JBQWdLQUVBQ0VvQUFJSVNBSUNnQkFBZ0tBRUFDRW9BQUlJU0FJQ2dCQUFnS0FFQUNFb0FBSUlTQUlDZ0JBQWdLQUVBQ0VvQUFJSVNBSUNnQkFBZ0tBRUFDRW9BQUlJU0FJQ2dCQUFnS0FFQUNFb0FBSUlTQUlDZ0JBQWdLQUVBQ0VvQUFJSVNBSUNnQkFBZ0tBRUFDRW9BQUlJU0FJQ2dCQUFnS0FFQUNFb0FBSUlTQUlDZ0JBQWdLQUVBQ0VvQUFJSVNBSUNnQkFBZ3FKcVdwcW1wTndDUVFENlh5MDJmMVpwNlJqazFOemE4NWl2OUhMQzVzU0ZqeHkrSjR6dCs2aFhKRE9UNEpkMllEQzFianU4dUlJQ2dCQUFnS0FFQUNFb0FBSUxLcHg0UVJjdTl0eC8wOWttcFYyeEYyMFdwRjVSdThWTkxQbmhhcForOVZyVi93VGRtMDZaTk5YMjlDejdhM2RQVFV5d1dlNHJGWXJHNGZ2MkdRdWVxUXFGUUtIUVdPbGU5V0NnVUNxdGVXTEZpeFlxVnFmY3lLQVFBSXNybjg3bGNmcGRkNmdmeUQ2OWIxOVhlMGJHMHJhT3R2YU85ZmRuU3R2Ym4vdno4WUMra0FnUUEySTdSbzBlOTgrQjN2UFBnZC96MUs0WE96dGJXUmZOYkY3WXVXTFJrYVZ0ZlgxL0NlYnhoQWdDVWJOZXhZMDg4NGRnVFR6ZzJsOHU5dEhyMWdnVy9tVHZ2MFVmbS9HejFtaldwcDFFQ0R3SURPMlNYblhlZWNzeFJNNjY0YlA3amM2Ky85dHVuZmVqazBhTkhwUjdGZ0xnQ0FNb2puODhmZGNUaFJ4MXhlTEZZblBmb0wyNmVmWHZyZ2tXcFI5RWZWd0JBbWRYVjFSMS83REYzM0hyREQrKzU3ZVNUanErdHJVMjlpSzBUQUdDd3ZPT2dBNjl1K3ZxOE9ROU0rL2haZFhWMXFlZndXZ0lBREs0OTk5ajlTNSsvNU9FSHZuL3NNVWVuM3NLckNBQlFDWHZ0OVpidmZlZGJzMis2ZHI5OUo2YmV3c3NFQUtpY2YzenZ1eDlvdWV1TG4vdU1lNFNxZ1FBQUZWVmJXM3Z1Sjg2Kzk4NWI5bjdyUDZUZUVwMEFBQWtjT09tQSszOXd4NGMrZUZMcUlhRUpBSkRHeUpFam0yWmVPZU9LeTl3ZGxJb0FBQ21kY2ZxcE4xLy8zWjNHakVrOUpDSUJBQko3ZDhOaGQ5OXg4N2hkeDZZZUVvNEFBT250TzNIQ2JiT3ZIejl1MTlSRFloRUFvQ3BNMkdmdlcyKyticGRkZGs0OUpCQUJBS3JGeEFsN1gvZTlhNFlQSDlESDFMRGpCQUNvSW9jZWN2Qi9mZjJLMUN1aUVBQ2d1cHh3L0pRTHo1K1dla1VJQWdCVW5VdisvVk1OaDcwcjlZcnNFd0NnNmd3Yk51eWIzL2hQbnl3MjJBUUFxRVp2ZWZPZVg3ajBNNmxYWkp3QUFGWHFJeDgrN2RCRERrNjlJc3NFQUtoU05UVTFsMS8yeFpxYW10UkRNa3NBZ09vMTZZRDlUem41eE5Rck1rc0FnS3IyNllzL21jL25VNi9JSmdFQXF0cGVlNzNsNUpPT1Q3MGltM1FWcXQwTk45MDZZK2EzZHZDSDFOVFUxTmZYRGE4ZlBuTGtpUEhqeCswMmZuemptWk1YdnpqaXdFbjc3enR4UXBYZnozN0JlUjl2dWYvQjFDc3lTQUFnaEw2K3Z1N3VudTd1bnBkV3IzNSsrUXU1WE82VUE5ZGNNcXMxbDh1TkhmdW13OTgzK2JncFJ4OXo5SkhWZVdmTC9tL2I3NzN2YWZqMS9OYlVRN0ttR3YvWWxGYy8vLzNZM05nd2ZaYi9VMFhYMmJucXZ2c2Z2Ty8rQjkvMHByLy95SWRQTzMvYU9WWDRscHhubkg2cUFKU2R4d0NBbDYxYTlaZi8vcDhiajV6eVQ5LzUzblViTjI1TVBlZFZUamh1eXBneG8xT3Z5Qm9CQUY2bHE2dnI2bXUrKzZIVHoveS94VStsM3ZJMzlmVjFIemo2eU5RcnNrWUFnSzFZc3JSdDZwblRIdnJ4STZtSC9NMkp4MDFKUFNGckJBRFl1ZzNkM1kyWGZQNzJPKzlOUGVSbGg3OXZjbDFkWGVvVm1TSUF3RGIxOWZWZGR2blg3cXVPcDJBT0gxNS8yTHNPU2IwaVV3UUE2RTlmWDk4WHYzcDVsVHdlOEw3SjcwazlJVk1FQU5pT25wN2l4WisrdEx1N0ovV1FuQ3VBOGhJQVlQdWVlZlpQMTkxNFMrb1Z1WVBlUHFtMjFxMVcyZmhYQ1F6SXRkZmRXT2pzVEx0aHhJZ1JFL2JaSisyR0xCRUFZRUM2dTN0dXUvM3UxQ3R5KyswM01mV0U3QkFBWUtCdXUvT2UzdDdldEJzbTdyTjMyZ0ZaSWdEQVFLMWE5WmY1clF2VGJ0aEhBTXBIQUlBU3pQbnB2TFFEOXRoanQ3UURza1FBZ0JLMExraDhCYkRIYmdKUU5nSUFsR0JwVy91R0RSc1NEaGczYmx6QzM1NHhBZ0NVb0xkMzg5SzJqb1FENnV2cjZ1dTlJMUI1Q0FCUW1pMGZLSmJRemp2dGxIWkFaZ2dBVUpybHk1ZW5IVEJxMUtpMEF6SkRBSURTckYzWGxYYUFONFV1RndFQVN0TzlvVHZ0Z09yODVQcWhTQUNBMHZRVUU3OHRhRDVmbTNaQVpnZ0FVSnJoOWNQVER0aTBLZkhiVVdTR0FBQ2xHVDRpY1FBMmJ0eVlka0JtQ0FCUW1wM0dqRWs3UUFES1JRQ0EwdXk1NSs1cEI2eGR1eTd0Z013UUFLQTBiOTV6ajdRRDFxeGRtM1pBWmdnQVVJSjhQci92eEFrSkIzUjM5eFNMeFlRRHNrUUFnQkpNT3VCdGFWK0h0WExsaXdsL2U4WUlBRkNDZHpjY2xuYkFDeXRXcEIyUUpWNVFsMzNuVFR2N3ZHbG5iK3U3YlJkVmNzc2I5NE9XSDEzNmhhK21Ya0h1dUNrZlNEdGdlZXEzb3NzU1Z3REFRTzIrKzI2SEhuSncyZzBkVHorVGRrQ1dDQUF3VUdkL2JPcXdZWWx2Tk5vN2xxVWRrQ1VDQUF6STZOR2pQdnFSMDFPdnlDMXRhMDg5SVRzRUFCaVFmNXQrWWZKUFl1bnE2bHEyekYxQVpTTUF3UGJ0LzdiOXpqbnJYMUt2eVAzK0Q0czNiOTZjZWtWMkNBQ3dIU05HakxqbXFwblY4Qzc4Q3hmOU52V0VUQkVBb0QrMXRjT2FabDR4Y2NMZXFZZmtjcm5jNDcrYW4zcENwZ2dBc0UzRGhnMzd4dGN1VC83Yy95MDJkSGN2K3MzdlVxL0lsUFRYZEVCMUdqbHk1TlZOTXo1dzFCR3BoN3pzc1Y4ODdvMmd5OHNWQUxBVkIwNDY0UHQzemE2ZVcvOWNMdmZ3STNOVFQ4Z2FWd0RBcTR3Wk0vckNDODY5NE54emFtdXI2S04zdTd0N2Z2Ynp4MUt2eUJvQkFGNDJidGV4VTgvNDUybWZPQ3Y1OC8xZjd5ZVAvSFRkdXE3VUs3SkdBQ0M2WGNlT2ZmL2hrNDgvOXBpamozcC9WZjFYL3l2ZGZlOFBVMC9JSUFHQUVHcHFhdXJxL3E2K3JuN2txSkc3alIrMzIvanhlNzl6Y3RQTVU5OSs0QUVUSit4VFUxT1RlbUIvRmorMTVJbldoYWxYWkpBQVFMWHIvdzI5ZDhUK2cvRkRCOEgxTjk2U2VrSTJlUllRVU5XZWZmYTVCeDU2T1BXS2JCSUFvS3BkL2Uzdjl2YjJwbDZSVFRVdFRWTlRid2hoOHVsZjJtbmNXMU92R01LZS8rT3ZucHgzVThJQi9vSkpyQ2s4KzZ0N3I4emwrbElQeWFaOExwZWJQcXMxOVl4eWFtNXNlTTFYK2psZ2MyTkRaWTdmOHY3MUI0MnJ3Ty9KckY4dkxseGE3cjlVU1g5OWY4SEs2K3ZyTy9kVFgvN3Q3NTRjakI4K2tMOStTVGNtUTh1VzQ3c0xDS2hTZDkzemcwRzY5V2NMQVFDcTBYTi9mbjdHekt0U3I4ZzRBUUNxenViTm16Lzd1YTkwZFhucDcrQVNBS0RxTkYzMW5kYUZpMUt2eUQ0QkFLckxUeDZaZSszMUtaL3hGWWNBQUZYa3Q3OTc4ck9mKzNMcUZWRUlBRkF0T3BZOWZmNUZGMi9vN2s0OUpBb0JBS3JDc3FlZk9lc1QvL3JTUzZ0VER3bEVBSUQwMnRvN1BuYk8rU3RYdnBoNlNDd0NBQ1RXdW1EUjFET25yWHl4a0hwSU9BSUFwSFRQOTFzK2Z0NG5WNjlaazNwSVJENFBJUHR1dU9uV0dUTy90ZFZ2VmV5dGtPRDExcTlmLzVYL3VQSytIejJVZWtoY0FnQWtzUGlwUDE3ODZVdWZmdWJaMUVOQ0V3Q2dvbnA3TjgrKzdZNXZObDFUTEJaVGI0bE9BSURLK2VXdm43amlhOTljc3JRdDlSQnlPUUVBS3VPNTUvNDhZK1pWRDgrWm0zb0lmeU1Bd09CNmZ2a0xOOCsrL2JZNzd1cnBjWjlQZFJFQVlMRDgvZytMYjdocDlrTS9tZU5EZmF1VEFBQmx0bkhqeHA4LzlyODN6NzU5L2hNTFVtK2hQd0lBbE1lbVRac2UvK1g4QjMvODhKeTU4OWF1WFpkNkR0c25BTUFPV2IxbXpZSUZ2NWs3NzlGSDV2enNwZFhleW0wb0VRQ2daSjJkcTFvWExIcGl3Y0luV2hmK2NVbGJYMTlmNmtXOEVRSUFiTWU2ZFYzdEhjdmEyanZhMjVlMXRYY3NiZS80MDUrZVN6MktNaEFBaUtpM3R6Zlh0Mmx0VjNleHVMSFkwOU5UM0Znc0Z0ZXZYMS9vN0N3VVZoVUtoVUxucWtLaDg4VkNZZmtMSzFhc1dKbDZMNE5DQUtEYTlmTjJmanZDV3dIaTdhQUJnaElBZ0tBRUFDQW9BUUFJU2dBQWdoSUFnS0FFQUNBb0FRQUlTZ0FBZ2hJQWdLQUVBQ0FvQVFBSVNnQUFnaElBZ0tBRUFDQW9BUUFJU2dBQWdoSUFnS0FFQUNBb0FRQUlTZ0FBZ2hJQWdLQUVBQ0NvZk9vQkRMcnpwcDE5M3JTenQvWGR0b3NxdWFYTVRqcmxqQ1ZMMjFLdmdLSEtGUUJBVUFJQUVKUUFBQVFsQUFCQkNRQkFVQUlBRUpRQUFBUWxBQUJCQ1FCQVVBSUFFSlFBQUFRbEFBQkJDUUJBVUFJQUVKUUFBQVFsQUFCQkNRQkFVQUlBRUpRQUFBUWxBQUJCQ1FCQVVBSUFFSlFBQUFRbEFBQkJDUUJBVUFJQUVKUUFBQVFsQUFCQkNRQkFVQUlBRUZRKzlZQW9UdjN3bWFrbmJFVnpZOFAwV2EycFZ3d04xZmtYaEIzaENnQWdLQUVBQ0VvQUFJS3FhV21hbW5vREFBbmtjN2xjeGg0R2JHNXNlTTFYK2psZzhFZEJIZC94VTY5SVppREhMK25HWkdqWmNueDNBUUVFSlFBQVFRa0FRRkFDQUJDVUFBQUVKUUFBUVFrQVFGQUNBQkNVQUFBRTVlMmdLY0hyWHhnNTFHWHZSTGtNdlZxVndlWUtBQ0FvQVFBSVNnQUFnaElBZ0tBRUFDQW9BUUFJU2dBQWd2STZBRXFRc1NlWUIvOUlMSEFGQUJDVUFBQUVKUUFBUVFrQVFGQUNBQkNVQUFBRUpRQUFRUWtBUUZBQ0FCQ1VBQUFFSlFBQVFRa0FRRkFDQUJDVUFBQUVKUUFBUVFrQVFGQUNBQkNVQUFBRUpRQUFRUWtBUUZBQ0FCQ1VBQUFFSlFBQVFRa0FRRkFDQUJDVUFBQUVKUUFBUVFrQVFGQUNBQkNVQUFBRUpRQUFRUWtBUUZBQ0FCQ1VBQUFFSlFBQVFRa0FRRkFDQUJDVUFBQUVKUUFBUVFrQVFGQUNBQkNVQUFBRUpRQUFRUWtBUUZBQ0FCQ1VBQUFFSlFBQVFRa0FRRkFDQUJDVUFBQUVKUUFBUVFrQVFGQUNBQkNVQUFBRUpRQUFRUWtBUUZBQ0FCQ1VBQUFFSlFBQVFRa0FRRkFDQUJDVUFBQUVKUUFBUVFrQVFGQUNBQkJVVFV2VDFOUWJBRWdnbjh2bHBzOXFUVDJqbkpvYkcxN3psWDRPMk56WWtMSGpsOFR4SFQvMWltUUdjdnlTYmt5R2xpM0hkeGNRUUZBQ0FCQ1VBQUFFSlFBQVFRa0FRRkFDQUJDVUFBQUVKUUFBUVFrQVFGQUNBQkJVUHZXQVNuajk2N2tIL3QzTWMvelVFMUp5L05RVEVuTUZBQkNVQUFBRUpRQUFRUWtBUUZBQ0FCQlVCcDhGVk5Jbk52aE1ETWRQdlNJWng0OTgvQzFjQVFBRUpRQUFRUWtBUUZBQ0FCQlU1UjRFZnVXcnJqMzJBdkI2RmI2ZGRBVUFFSlFBQUFRbEFBQkJDUUJBVUFJQUVKUUFBQVFsQUFCQkNRQkFVQUlBRUpRQUFBUWxBQUJCQ1FCQVVBSUFFSlFBQUFRbEFBQkJDUUJBVUFJQUVKUUFBQVFsQUFCQkNRQkFVQUlBRUpRQUFBUWxBQUJCQ1FCQVVBSUFFSlFBQUFTVjM5WTNtaHNiQnUrM2x2ZUhUNS9WV3NhZkJqQkFRLzEyMGhVQVFGQUNBQkNVQUFBRXRjM0hBTXAreC9vcjc4OXlyejJRQVVQOWR0SVZBRUJRQWdBUWxBQUFCQ1VBQUVFSkFFQlFBZ0FRbEFBQUJDVUFBRUVKQUVCUUFnQVFsQUFBQkNVQUFFRUpBRUJRQWdBUWxBQUFCQ1VBQUVFSkFFQlFBZ0FRbEFBQUJDVUFBRUVKQUVCUUFnQVFsQUFBQkNVQUFFRUpBRUJRK1lyOXB1bXpXaXYydXdDR29ncmZUcm9DQUFoS0FBQ0NFZ0NBb0FRQUlLaWFscWFwcVRjQWtFQStGL3Y1T2MyTkRZNmZla1V5anUvNHFWY2tzK1g0L3c4dUN5Y3g1bTE3blFBQUFBQkpSVTVFcmtKZ2dnPT0iLCAic2l6ZXMiOiAiNTEyeDUxMiIsICJ0eXBlIjogImltYWdlL3BuZyIsICJwdXJwb3NlIjogImFueSBtYXNrYWJsZSJ9XX0=">
+<meta name="theme-color" content="#1B1E22">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAIAAAB7GkOtAAASiElEQVR4nO3deXTddZ3H4ZvmTtIVGEvLoozQglBEBDlROyKLlHUQYRDrIKBlGfBUJo4ccZc5DFitE6FodBj2cthRAwIKtVZwUEvaqgedYpukgEhpual0SZvcNs38UY6ytGkuvbnfm9/nef7yJJzk/SXH++J315qWpqk5AOLJ53K56bNaU89IprmxwfFTr0jG8R0/9Ypkthx/WOoZAKQhAABBCQBAUAIAEJQAAAQlAABB5Sv2m5obG/76vyM/+wpgWyp8O+kKACAoAQAISgAAghIAgKAEACAoAQAISgAAghIAgKAEACAoAQAISgAAghIAgKAEACAoAQAISgAAghIAgKAEACAoAQAISgAAghIAgKAEACAoAQAISgAAghIAgKAEACAoAQAIKr+tbzQ3Ngzeby3vD58+q7WMPw1ggIb67aQrAICgBAAgKAEACGqbjwGU/Y71V96f5V57IAOG+u2kKwCAoAQAICgBAAhKAACCEgCAoAQAICgBAAhKAACCEgCAoAQAICgBAAhKAACCEgCAoAQAICgBAAhKAACCEgCAoAQAICgBAAhKAACCEgCAoAQAICgBAAhKAACCEgCAoPIV+03TZ7VW7HcBDEUVvp10BQAQlAAABCUAAEEJAEBQNS1NUzP28GxzY0PqCUA2ZebWsrmxYfqsVlcAAEEJAEBQAgAQlAAABCUAAEFV7q0gEurngfstD4VXckxVcXzHT70imYEcP/NPKXQFABCUAAAEJQAAQQkAQFACABCUAAAEJQAAQQkAQFA1LU1TU28AIIF8LkPvcL3F61+855XA2+L4jp96RTJv7JXAmfk35vMAAEITAICgBAAgKAEACEoAAIISAICgBAAgKAEACEoAAIISAICgBAAgKAEACEoAAIISAICgBAAgKAEACEoAAIISAICgBAAgKAEACEoAAIISAICgBAAgKAEACEoAAIISAICgBAAgKAEACEoAAIISAICgBAAgKAEACEoAAIISAICgBAAgKAEACEoAAIISAICgBAAgKAEACEoAAIISAICgBAAgKAEACEoAAIISAICgBAAgKAEACEoAAIISAICgBAAgKAEACEoAAIISAICgBAAgKAEACEoAAIISAICgBAAgKAEACEoAAIISAICgBAAgKAEACEoAAIISAICgBAAgKAEACEoAAIISAICgBAAgKAEACEoAAIISAICgBAAgKAEACEoAAIISAICgBAAgKAEACEoAAIISAICgBAAgqJqWpqmpNwCQQD6Xy02f1Zp6Rjk1Nza85iv9HLC5sSFjxy+J4zt+6hXJDOT4Jd2YDC1bju8uIICgBAAgKAEACEoAAILKpx4QRcu9tx/09kmpV2xF20WpF5Ru8VNLPnhapZ+9VrV/wTdm06ZNNX29Cz7a3dPTUywWe4rFYrG4fv2GQueqQqFQKHQWOle9WCgUCqteWLFixYqVqfcyKAQAIsrn87lcfpdd6gfyD69b19Xe0bG0raOtvaO9fdnStvbn/vz8YC+kAgQA2I7Ro0e98+B3vPPgd/z1K4XOztbWRfNbF7YuWLRkaVtfX1/CebxhAgCUbNexY0884dgTTzg2l8u9tHr1ggW/mTvv0Ufm/Gz1mjWpp1ECDwIDO2SXnXeecsxRM664bP7jc6+/9tunfejk0aNHpR7FgLgCAMojn88fdcThRx1xeLFYnPfoL26efXvrgkWpR9EfVwBAmdXV1R1/7DF33HrDD++57eSTjq+trU29iK0TAGCwvOOgA69u+vq8OQ9M+/hZdXV1qefwWgIADK4999j9S5+/5OEHvn/sMUen3sKrCABQCXvt9Zbvfedbs2+6dr99J6bewssEAKicf3zvux9oueuLn/uMe4SqgQAAFVVbW3vuJ86+985b9n7rP6TeEp0AAAkcOOmA+39wx4c+eFLqIaEJAJDGyJEjm2ZeOeOKy9wdlIoAACmdcfqpN1//3Z3GjEk9JCIBABJ7d8Nhd99x87hdx6YeEo4AAOntO3HCbbOvHz9u19RDYhEAoCpM2GfvW2++bpdddk49JBABAKrFxAl7X/e9a4YPH9DH1LDjBACoIocecvB/ff2K1CuiEACgupxw/JQLz5+WekUIAgBUnUv+/VMNh70r9YrsEwCg6gwbNuyb3/hPnyw22AQAqEZvefOeX7j0M6lXZJwAAFXqIx8+7dBDDk69IssEAKhSNTU1l1/2xZqamtRDMksAgOo16YD9Tzn5xNQrMksAgKr26Ys/mc/nU6/IJgEAqtpee73l5JOOT70im3QVqt0NN906Y+a3dvCH1NTU1NfXDa8fPnLkiPHjx+02fnzjmZMXvzjiwEn77ztxQpXfz37BeR9vuf/B1CsySAAghL6+vu7unu7unpdWr35++Qu5XO6UA9dcMqs1l8uNHfumw983+bgpRx9z9JHVeWfL/m/b773vafj1/NbUQ7KmGv/YlFc///3Y3NgwfZb/U0XX2bnqvvsfvO/+B9/0pr//yIdPO3/aOVX4lpxnnH6qAJSdxwCAl61a9Zf//p8bj5zyT9/53nUbN25MPedVTjhuypgxo1OvyBoBAF6lq6vr6mu++6HTz/y/xU+l3vI39fV1Hzj6yNQrskYAgK1YsrRt6pnTHvrxI6mH/M2Jx01JPSFrBADYug3d3Y2XfP72O+9NPeRlh79vcl1dXeoVmSIAwDb19fVddvnX7quOp2AOH15/2LsOSb0iUwQA6E9fX98Xv3p5lTwe8L7J70k9IVMEANiOnp7ixZ++tLu7J/WQnCuA8hIAYPueefZP1914S+oVuYPePqm21q1W2fhXCQzItdfdWOjsTLthxIgRE/bZJ+2GLBEAYEC6u3tuu/3u1Cty++03MfWE7BAAYKBuu/Oe3t7etBsm7rN32gFZIgDAQK1a9Zf5rQvTbthHAMpHAIASzPnpvLQD9thjt7QDskQAgBK0Lkh8BbDHbgJQNgIAlGBpW/uGDRsSDhg3blzC354xAgCUoLd389K2joQD6uvr6uu9I1B5CABQmi0fKJbQzjvtlHZAZggAUJrly5enHTBq1Ki0AzJDAIDSrF3XlXaAN4UuFwEAStO9oTvtgOr85PqhSACA0vQUE78taD5fm3ZAZggAUJrh9cPTDti0KfHbUWSGAAClGT4icQA2btyYdkBmCABQmp3GjEk7QADKRQCA0uy55+5pB6xduy7tgMwQAKA0b95zj7QD1qxdm3ZAZggAUIJ8Pr/vxAkJB3R39xSLxYQDskQAgBJMOuBtaV+HtXLliwl/e8YIAFCCdzcclnbACytWpB2QJV5Ql33nTTv7vGlnb+u7bRdVcssb94OWH136ha+mXkHuuCkfSDtgeeq3ossSVwDAQO2++26HHnJw2g0dTz+TdkCWCAAwUGd/bOqwYYlvNNo7lqUdkCUCAAzI6NGjPvqR01OvyC1ta089ITsEABiQf5t+YfJPYunq6lq2zF1AZSMAwPbt/7b9zjnrX1KvyP3+D4s3b96cekV2CACwHSNGjLjmqpnV8C78Cxf9NvWETBEAoD+1tcOaZl4xccLeqYfkcrnc47+an3pCpggAsE3Dhg37xtcuT/7c/y02dHcv+s3vUq/IlPTXdEB1Gjly5NVNMz5w1BGph7zssV887o2gy8sVALAVB0464Pt3za6eW/9cLvfwI3NTT8gaVwDAq4wZM/rCC8694Nxzamur6KN3u7t7fvbzx1KvyBoBAF42btexU8/452mfOCv58/1f7yeP/HTduq7UK7JGACC6XceOff/hk48/9pijj3p/Vf1X/yvdfe8PU0/IIAGAEGpqaurq/q6+rn7kqJG7jR+32/jxe79zctPMU99+4AETJ+xTU1OTemB/Fj+15InWhalXZJAAQLXr/w29d8T+g/FDB8H1N96SekI2eRYQUNWeffa5Bx56OPWKbBIAoKpd/e3v9vb2pl6RTTUtTVNTbwhh8ulf2mncW1OvGMKe/+Ovnpx3U8IB/oJJrCk8+6t7r8zl+lIPyaZ8LpebPqs19Yxyam5seM1X+jlgc2NDZY7f8v71B42rwO/JrF8vLlxa7r9USX99f8HK6+vrO/dTX/7t754cjB8+kL9+STcmQ8uW47sLCKhSd93zg0G69WcLAQCq0XN/fn7GzKtSr8g4AQCqzubNmz/7ua90dXnp7+ASAKDqNF31ndaFi1KvyD4BAKrLTx6Ze+31KZ/xFYcAAFXkt7978rOf+3LqFVEIAFAtOpY9ff5FF2/o7k49JAoBAKrCsqefOesT//rSS6tTDwlEAID02to7PnbO+StXvph6SCwCACTWumDR1DOnrXyxkHpIOAIApHTP91s+ft4nV69Zk3pIRD4PIPtuuOnWGTO/tdVvVeytkOD11q9f/5X/uPK+Hz2UekhcAgAksPipP1786UuffubZ1ENCEwCgonp7N8++7Y5vNl1TLBZTb4lOAIDK+eWvn7jia99csrQt9RByOQEAKuO55/48Y+ZVD8+Zm3oIfyMAwOB6fvkLN8++/bY77urpcZ9PdREAYLD8/g+Lb7hp9kM/meNDfauTAABltnHjxp8/9r83z759/hMLUm+hPwIAlMemTZse/+X8B3/88Jy589auXZd6DtsnAMAOWb1mzYIFv5k779FH5vzspdXeym0oEQCgZJ2dq1oXLHpiwcInWhf+cUlbX19f6kW8EQIAbMe6dV3tHcva2jva25e1tXcsbe/405+eSz2KMhAAiKi3tzfXt2ltV3exuLHY09NT3FgsFtevX1/o7CwUVhUKhULnqkKh88VCYfkLK1asWJl6L4NCAKDa9fN2fjvCWwHi7aABghIAgKAEACAoAQAISgAAghIAgKAEACAoAQAISgAAghIAgKAEACAoAQAISgAAghIAgKAEACAoAQAISgAAghIAgKAEACAoAQAISgAAghIAgKAEACCofOoBDLrzpp193rSzt/XdtosquaXMTjrljCVL21KvgKHKFQBAUAIAEJQAAAQlAABBCQBAUAIAEJQAAAQlAABBCQBAUAIAEJQAAAQlAABBCQBAUAIAEJQAAAQlAABBCQBAUAIAEJQAAAQlAABBCQBAUAIAEJQAAAQlAABBCQBAUAIAEJQAAAQlAABBCQBAUAIAEFQ+9YAoTv3wmaknbEVzY8P0Wa2pVwwN1fkXhB3hCgAgKAEACEoAAIKqaWmamnoDAAnkc7lcxh4GbG5seM1X+jlg8EdBHd/xU69IZiDHL+nGZGjZcnx3AQEEJQAAQQkAQFACABCUAAAEJQAAQQkAQFACABCUAAAE5e2gKcHrXxg51GXvRLkMvVqVweYKACAoAQAISgAAghIAgKAEACAoAQAISgAAgvI6AEqQsSeYB/9ILHAFABCUAAAEJQAAQQkAQFACABCUAAAEJQAAQQkAQFACABCUAAAEJQAAQQkAQFACABCUAAAEJQAAQQkAQFACABCUAAAEJQAAQQkAQFACABCUAAAEJQAAQQkAQFACABCUAAAEJQAAQQkAQFACABCUAAAEJQAAQQkAQFACABCUAAAEJQAAQQkAQFACABCUAAAEJQAAQQkAQFACABCUAAAEJQAAQQkAQFACABCUAAAEJQAAQQkAQFACABCUAAAEJQAAQQkAQFACABCUAAAEJQAAQQkAQFACABCUAAAEJQAAQQkAQFACABCUAAAEJQAAQQkAQFACABBUTUvT1NQbAEggn8vlps9qTT2jnJobG17zlX4O2NzYkLHjl8TxHT/1imQGcvySbkyGli3HdxcQQFACABCUAAAEJQAAQQkAQFACABCUAAAEJQAAQQkAQFACABBUPvWASnj967kH/t3Mc/zUE1Jy/NQTEnMFABCUAAAEJQAAQQkAQFACABBUBp8FVNInNvhMDMdPvSIZx498/C1cAQAEJQAAQQkAQFACABBU5R4EfuWrrj32AvB6Fb6ddAUAEJQAAAQlAABBCQBAUAIAEJQAAAQlAABBCQBAUAIAEJQAAAQlAABBCQBAUAIAEJQAAAQlAABBCQBAUAIAEJQAAAQlAABBCQBAUAIAEJQAAAQlAABBCQBAUAIAEJQAAASV39Y3mhsbBu+3lveHT5/VWsafBjBAQ/120hUAQFACABCUAAAEtc3HAMp+x/or789yrz2QAUP9dtIVAEBQAgAQlAAABCUAAEEJAEBQAgAQlAAABCUAAEEJAEBQAgAQlAAABCUAAEEJAEBQAgAQlAAABCUAAEEJAEBQAgAQlAAABCUAAEEJAEBQAgAQlAAABCUAAEEJAEBQ+Yr9pumzWiv2uwCGogrfTroCAAhKAACCEgCAoAQAIKialqapqTcAkEA+F/v5Oc2NDY6fekUyju/4qVcks+X4/w8uCycx5m17nQAAAABJRU5ErkJggg==">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Ebbing Project">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal:#1B1E22;
+    --concrete:#E8E6E1;
+    --paper:#F7F5F1;
+    --steel:#5C6B73;
+    --brass:#B08D57;
+    --ink:#2A2D31;
+    --line: rgba(176,141,87,.35);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Source Sans 3', sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+  }
+  h1,h2,h3{font-family:'Archivo', sans-serif; letter-spacing:.01em; text-transform:uppercase;}
+  .mono{font-family:'JetBrains Mono', monospace;}
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+
+  /* Skip link / focus */
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+    outline:3px solid var(--brass); outline-offset:2px;
+  }
+  .skip-link{position:absolute; left:-999px; top:0; background:var(--brass); color:var(--charcoal); padding:.6rem 1rem; z-index:200;}
+  .skip-link:focus{left:1rem; top:1rem;}
+
+  /* Header */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:var(--charcoal); color:var(--paper);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-wrap{
+    max-width:1200px; margin:0 auto; padding:1rem 1.5rem;
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;
+  }
+  .brand{font-family:'Archivo', sans-serif; font-weight:900; font-size:1.1rem; letter-spacing:.08em;}
+  .brand span{color:var(--brass);}
+  nav ul{list-style:none; display:flex; gap:1.6rem; flex-wrap:wrap; font-size:.85rem; letter-spacing:.08em; text-transform:uppercase;}
+  nav a{text-decoration:none; padding-bottom:.25rem; border-bottom:1px solid transparent; transition:border-color .2s;}
+  nav a:hover, nav a:focus{border-color:var(--brass);}
+  .nav-cta{
+    background:var(--brass); color:var(--charcoal); font-weight:600;
+    padding:.5rem 1.1rem; text-decoration:none; font-size:.85rem; letter-spacing:.06em; text-transform:uppercase;
+    white-space:nowrap;
+  }
+
+  /* Hero */
+  .hero{
+    position:relative; overflow:hidden;
+    background:linear-gradient(160deg, var(--charcoal) 0%, #2C3136 60%, var(--steel) 130%);
+    color:var(--paper); padding:6rem 1.5rem 7rem;
+  }
+  .blueprint-grid{
+    position:absolute; inset:0; pointer-events:none; opacity:.18;
+    background-image:
+      repeating-linear-gradient(0deg, var(--brass) 0 1px, transparent 1px 80px),
+      repeating-linear-gradient(90deg, var(--brass) 0 1px, transparent 1px 80px);
+  }
+  .crosshair{position:absolute; width:32px; height:32px; opacity:.7;}
+  .crosshair::before, .crosshair::after{content:""; position:absolute; background:var(--brass);}
+  .crosshair::before{width:100%; height:1px; top:50%; left:0;}
+  .crosshair::after{width:1px; height:100%; left:50%; top:0;}
+  .crosshair.tl{top:24px; left:24px;} .crosshair.tr{top:24px; right:24px;}
+  .crosshair.bl{bottom:24px; left:24px;} .crosshair.br{bottom:24px; right:24px;}
+
+  .hero-inner{max-width:1200px; margin:0 auto; position:relative; z-index:2;}
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace; font-size:.8rem; letter-spacing:.25em;
+    color:var(--brass); margin-bottom:1.2rem;
+  }
+  .hero h1{font-size:clamp(2.4rem, 6vw, 4.6rem); line-height:1.05; max-width:14ch; font-weight:900;}
+  .hero p.lead{margin-top:1.6rem; max-width:46ch; font-size:1.15rem; color:var(--concrete);}
+  .hero-actions{margin-top:2.4rem; display:flex; gap:1rem; flex-wrap:wrap;}
+  .btn{
+    display:inline-block; padding:.85rem 1.7rem; text-decoration:none; font-size:.9rem;
+    letter-spacing:.08em; text-transform:uppercase; font-weight:600; border:1px solid var(--brass);
+    transition:background .2s, color .2s;
+  }
+  .btn-primary{background:var(--brass); color:var(--charcoal);}
+  .btn-primary:hover{background:#c9a878;}
+  .btn-ghost{color:var(--paper); border-color:var(--paper);}
+  .btn-ghost:hover{background:rgba(247,245,241,.08);}
+
+  .spec-strip{
+    border-top:1px solid var(--line); margin-top:4rem; padding-top:1.5rem;
+    display:flex; flex-wrap:wrap; gap:2.5rem; font-family:'JetBrains Mono', monospace; font-size:.78rem;
+    color:var(--concrete); letter-spacing:.05em;
+  }
+  .spec-strip strong{display:block; color:var(--brass); font-size:.7rem; letter-spacing:.2em; margin-bottom:.3rem;}
+
+  /* Sections */
+  section{padding:5rem 1.5rem;}
+  .section-inner{max-width:1200px; margin:0 auto;}
+  .section-head{max-width:60ch; margin-bottom:3rem;}
+  .section-head .tag{
+    font-family:'JetBrains Mono', monospace; font-size:.78rem; letter-spacing:.25em; color:var(--brass);
+    display:block; margin-bottom:.8rem;
+  }
+  .section-head h2{font-size:clamp(1.8rem, 4vw, 2.6rem);}
+  .section-head p{margin-top:1rem; color:var(--steel); font-size:1.05rem;}
+
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:3rem;}
+  @media (max-width:820px){.two-col{grid-template-columns:1fr;}}
+
+  .card{
+    background:var(--paper); border:1px solid rgba(92,107,115,.25); padding:1.8rem;
+    position:relative;
+  }
+  .card .legend{
+    font-family:'JetBrains Mono', monospace; font-size:.75rem; color:var(--brass);
+    border:1px solid var(--brass); display:inline-flex; align-items:center; justify-content:center;
+    width:1.8rem; height:1.8rem; margin-bottom:1rem;
+  }
+  .card h3{font-size:1.05rem; margin-bottom:.6rem; letter-spacing:.04em;}
+  .card p{font-size:.95rem; color:var(--steel);}
+
+  .grid-3{display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:1.5rem;}
+
+  .dark{background:var(--charcoal); color:var(--paper);}
+  .dark .section-head p{color:var(--concrete);}
+  .dark .card{background:#22262B; border-color:var(--line); color:var(--paper);}
+  .dark .card p{color:var(--concrete);}
+
+  /* Referenzen */
+  .logo-wall{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(150px,1fr)); gap:1px;
+    background:rgba(92,107,115,.25); border:1px solid rgba(92,107,115,.25);
+  }
+  .logo-tile{
+    background:var(--paper); aspect-ratio:3/2; display:flex; align-items:center; justify-content:center;
+    font-family:'JetBrains Mono', monospace; font-size:.75rem; color:var(--steel); text-align:center; padding:1rem;
+  }
+  .ref-note{
+    margin-top:1.5rem; font-size:.85rem; color:var(--steel); border-left:3px solid var(--brass); padding-left:1rem;
+  }
+
+  /* Tätigkeitsfelder */
+  .field-list{list-style:none; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1px; background:rgba(92,107,115,.25); border:1px solid rgba(92,107,115,.25);}
+  .field-list li{
+    background:var(--paper); padding:1.1rem 1.3rem; font-family:'JetBrains Mono', monospace; font-size:.85rem;
+    display:flex; gap:.8rem; align-items:baseline;
+  }
+  .field-list li::before{content:attr(data-mark); color:var(--brass);}
+
+  /* Kontakt */
+  .contact-grid{display:grid; grid-template-columns:1.1fr 1fr; gap:3rem;}
+  @media (max-width:820px){.contact-grid{grid-template-columns:1fr;}}
+  address{font-style:normal; font-size:1rem; line-height:1.9;}
+  address a{color:var(--brass); text-decoration:none;}
+  address a:hover{text-decoration:underline;}
+  form{display:grid; gap:1rem;}
+  label{font-size:.8rem; letter-spacing:.08em; text-transform:uppercase; font-family:'JetBrains Mono', monospace; display:block; margin-bottom:.4rem;}
+  input, textarea, select{
+    width:100%; padding:.75rem .9rem; border:1px solid var(--steel); background:var(--paper); color:var(--ink);
+    font-family:inherit; font-size:1rem;
+  }
+  textarea{min-height:120px; resize:vertical;}
+  .form-note{font-size:.8rem; color:var(--steel); margin-top:.5rem;}
+
+  /* Footer */
+  footer{background:var(--charcoal); color:var(--concrete); padding:3rem 1.5rem 2rem; font-size:.85rem;}
+  .footer-inner{max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:2rem;}
+  .footer-links{list-style:none; display:flex; gap:1.5rem; flex-wrap:wrap;}
+  .footer-links a{text-decoration:none; color:var(--concrete);}
+  .footer-links a:hover{color:var(--brass);}
+  .footer-bottom{
+    max-width:1200px; margin:2rem auto 0; padding-top:1.5rem; border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem; font-family:'JetBrains Mono', monospace; font-size:.75rem;
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+
+  /* Page sections for legal pages */
+  .legal{max-width:760px; margin:0 auto; padding:5rem 1.5rem;}
+  .legal h2{margin-bottom:1rem; font-size:1.6rem;}
+  .legal h3{margin:1.6rem 0 .6rem; font-size:1.1rem;}
+  .legal p, .legal li{color:var(--steel); font-size:.95rem; margin-bottom:.6rem;}
+  .legal[hidden]{display:none;}
+
+  /* Persistentes Claims-Badge (immer sichtbar, im Seitendesign) */
+  .brand-badge{
+    position:fixed; top:18px; right:18px; z-index:150;
+    background:rgba(27,30,34,.78); backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+    border-left:2px solid var(--brass);
+    padding:.7rem 1rem; max-width:230px;
+    font-family:'JetBrains Mono', monospace; font-size:.68rem; line-height:1.55;
+    letter-spacing:.04em; color:var(--concrete);
+    box-shadow:0 6px 20px rgba(0,0,0,.25);
+  }
+  .brand-badge .b-main{
+    display:block; color:var(--brass); font-weight:600; letter-spacing:.18em;
+    font-size:.65rem; margin-bottom:.3rem;
+  }
+  @media (max-width:760px){
+    .brand-badge{max-width:150px; top:10px; right:10px; padding:.5rem .7rem; font-size:.58rem;}
+    .brand-badge .b-main{font-size:.55rem;}
+  }
+</style>
+</head>
+<body>
+<div class="brand-badge" aria-label="Markenclaim">
+  <span class="b-main">GENERAL CONTRACTOR<br>SHOPFITTING</span>
+  creating retail space solutions<br>driven by passion
+</div>
+
+<a href="#main" class="skip-link">Zum Inhalt springen</a>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">EBBING <span>PROJECT</span></div>
+    <nav aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#philosophie">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#referenzen">Referenzen</a></li>
+        <li><a href="#karriere">Karriere</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="#kontakt">Projekt anfragen</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="blueprint-grid" aria-hidden="true"></div>
+    <div class="crosshair tl" aria-hidden="true"></div>
+    <div class="crosshair tr" aria-hidden="true"></div>
+    <div class="crosshair bl" aria-hidden="true"></div>
+    <div class="crosshair br" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <span class="eyebrow">GENERALUNTERNEHMER · LADENBAU · WELTWEIT</span>
+      <h1>Räume, die Marken erlebbar machen.</h1>
+      <p class="lead">Ebbing Project realisiert Ladenbau, Innenausbau und komplette Generalunternehmerleistungen – von der Konzeptidee bis zur schlüsselfertigen Übergabe. Auf gestalterisch brillantem Niveau, höchsten funktionalen Ansprüchen und mit einem global aktiven Montagenetzwerk.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#kontakt">Projekt besprechen</a>
+        <a class="btn btn-ghost" href="#referenzen">Referenzen ansehen</a>
+      </div>
+      <div class="spec-strip">
+        <div><strong>Sitz</strong>Raesfeld-Erle, NRW</div>
+        <div><strong>Leistung</strong>Konzept bis Übergabe</div>
+        <div><strong>Reichweite</strong>Europaweites Montagenetzwerk</div>
+        <div><strong>Geführt von</strong>Jörg Ebbing, Geschäftsführer</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHIE / ABOUT -->
+  <section id="philosophie">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="tag">01 — PHILOSOPHIE</span>
+        <h2>Mit Expertise zu Mehrwert</h2>
+        <p>Wir wissen, was wir können, was möglich ist – und was Sie und Ihre Kunden wünschen.</p>
+      </div>
+      <div class="two-col">
+        <div>
+          <p>Wir wagen viel Neues und trauen uns viel zu, ohne dabei unkalkulierbare Risiken einzugehen. Wir wollen zeigen, dass wir nicht nur anders sind als andere, sondern besser – und dass es sich lohnt, Ihr Projekt von uns als Fullservice-Generalunternehmung planen und realisieren zu lassen.</p>
+          <p style="margin-top:1rem;">Wir hören zu und denken in Ihrem Sinne mit: über Visionen ebenso wie über konkrete Anforderungen. Wir betrachten das Ganze und klären jedes Detail.</p>
+        </div>
+        <div>
+          <p>Ebbing Project inszeniert Räume nach individuellen Marken-, Handels- und Unternehmenskonzepten – weltweit, nach höchsten funktionalen Ansprüchen, auf gestalterisch brillantem Niveau.</p>
+          <p style="margin-top:1rem;">Wir realisieren einzigartige Inneneinrichtungen und komplette Innenausbauten inklusive aller Generalunternehmerleistungen sowie technischer Prototypen bis zur Serienreife – branchenübergreifend, nach den Entwürfen unserer Kunden, in enger Zusammenarbeit mit Architekten, Designern und Projektteams. Unser global aktives Lieferanten- und Montagenetzwerk ermöglicht es, Wünsche jederzeit flexibel, unabhängig und in bester Qualität vor Ort umzusetzen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRUKTUR -->
+  <section class="dark" id="struktur">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="tag">02 — STRUKTUR</span>
+        <h2>Ein Team, ein Projekt</h2>
+        <p>Inhabergeführt, eingespielt und mit gesundem Wachstum.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <span class="legend">A</span>
+          <h3>Teamgeist</h3>
+          <p>Bei uns steht jeder für jeden ein – und alle gemeinsam für das Projekt. Unsere Techniker koordinieren Ihr Vorhaben während der gesamten Fertigung und Montage vor Ort.</p>
+        </div>
+        <div class="card">
+          <span class="legend">B</span>
+          <h3>Werte</h3>
+          <p>Ehrlichkeit, Zuverlässigkeit und Bodenständigkeit prägen unsere Arbeitsweise – sichtbar im strukturierten Vorgehen und der konstanten Entwicklung des Unternehmens.</p>
+        </div>
+        <div class="card">
+          <span class="legend">C</span>
+          <h3>Partnerschaft</h3>
+          <p>Wir arbeiten mit Partnern, die eine offene, faire Geschäftsbeziehung suchen – nicht für den kurzfristigen Gewinn, sondern für eine dauerhafte Zusammenarbeit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE / LEISTUNGEN -->
+  <section id="expertise">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="tag">03 — EXPERTISE</span>
+        <h2>Kundenindividuelle Lösungen statt Standard</h2>
+        <p>Erfolg gibt es nicht von der Stange. Vom Konzept über Prototypenbau und Serienfertigung bis zur Logistik und Montage vor Ort – überall auf der Welt. Unsere Projekte fügen sich in bestehende Räume ein und setzen zugleich einen aufmerksamkeitsstarken Kontrast zum Wettbewerbsumfeld.</p>
+      </div>
+
+      <div class="grid-3" style="margin-bottom:3rem;">
+        <div class="card">
+          <span class="legend">①</span>
+          <h3>Ladenbau</h3>
+          <p>Architekten- und Ingenieurleistungen für Neubau, Umwandlung, Sanierung und Modernisierung – von der Fassade über Innenausbau und Logistik bis zur Haustechnik, vom ersten Gespräch bis zur schlüsselfertigen Übergabe.</p>
+        </div>
+        <div class="card">
+          <span class="legend">②</span>
+          <h3>Projektmanagement</h3>
+          <p>Sorgfältige Planung, Organisation und Kontrolle von Terminen, Kosten und Ressourcen. Ein interdisziplinäres Team bündelt Synergien und sichert Qualität und Informationsfluss in der Ausführung.</p>
+        </div>
+        <div class="card">
+          <span class="legend">③</span>
+          <h3>Generalunternehmer</h3>
+          <p>Ein einziger kompetenter Vertragspartner mit voller technischer, kaufmännischer und organisatorischer Verantwortung – getragen von einem europaweiten Netz ausführender Firmen.</p>
+        </div>
+        <div class="card">
+          <span class="legend">④</span>
+          <h3>Facility Management</h3>
+          <p>Individuelle Konzepte zur Reduzierung von Kosten, Verbesserung der Wirtschaftlichkeit und langfristigen Werterhaltung Ihrer Immobilien und Einrichtungen.</p>
+        </div>
+        <div class="card">
+          <span class="legend">⑤</span>
+          <h3>Generalplanung</h3>
+          <p>Ein kompetenter Ansprechpartner für alle Projektphasen und Gewerke. Koordination, Transparenz bei Qualität, Kosten und Terminen – alles aus einer Hand.</p>
+        </div>
+        <div class="card">
+          <span class="legend">⑥</span>
+          <h3>Innenausbau</h3>
+          <p>Steuerung aller Gewerke im Takt – Trockenbau, Bodenbeläge, Maler, Haustechnik, Fassade. Klärung baurechtlicher Vorschriften und Sicherung der Termine, von der Auftragsklärung bis zur Fertigstellung.</p>
+        </div>
+      </div>
+
+      <h3 style="margin-bottom:1rem; font-size:1rem; letter-spacing:.15em;">Tätigkeitsfelder</h3>
+      <ul class="field-list">
+        <li data-mark="—">Beratung</li>
+        <li data-mark="—">Projektmanagement</li>
+        <li data-mark="—">Ladenbau</li>
+        <li data-mark="—">Generalunternehmer</li>
+        <li data-mark="—">Facility Management</li>
+        <li data-mark="—">Innenausbau</li>
+        <li data-mark="—">Generalplanung</li>
+        <li data-mark="—">Wartung</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- REFERENZEN -->
+  <section class="dark" id="referenzen">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="tag">04 — REFERENZEN</span>
+        <h2>Ein Auszug unserer Projekte</h2>
+        <p>Ein kleiner Auszug von Kunden, die uns bereits vertrauen.</p>
+      </div>
+      <div class="logo-wall" role="list" aria-label="Kundenlogos">
+        <div class="logo-tile" role="listitem">Logo 1<br>[Kundenname einsetzen]</div>
+        <div class="logo-tile" role="listitem">Logo 2<br>[Kundenname einsetzen]</div>
+        <div class="logo-tile" role="listitem">Logo 3<br>[Kundenname einsetzen]</div>
+        <div class="logo-tile" role="listitem">Logo 4<br>[Kundenname einsetzen]</div>
+        <div class="logo-tile" role="listitem">Logo 5<br>[Kundenname einsetzen]</div>
+        <div class="logo-tile" role="listitem">Logo 6<br>[Kundenname einsetzen]</div>
+      </div>
+      <p class="ref-note">Hinweis für die Wix-Umsetzung: Jedes Logo/Bild sollte einen Alt-Text mit Kundennamen erhalten (z. B. „Ladenbau-Projekt für [Kunde], [Stadt]“). Ergänzen Sie pro Projekt idealerweise 1–2 Sätze: Branche, Leistungsumfang, Standort, Jahr. Das verbessert Auffindbarkeit in Suchmaschinen und macht die Referenzen für Besucher überzeugender.</p>
+    </div>
+  </section>
+
+  <!-- KARRIERE -->
+  <section id="karriere">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="tag">05 — KARRIERE</span>
+        <h2>Wir suchen Verstärkung</h2>
+        <p>Ebbing Project wächst – und wir suchen Menschen, die mit Teamgeist, Zuverlässigkeit und Bodenständigkeit anpacken.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <span class="legend">①</span>
+          <h3>Offene Positionen</h3>
+          <p>[Hier aktuelle Stellenanzeigen einfügen, z. B. Projektleiter Ladenbau (m/w/d), Bauleiter (m/w/d), Monteur/Schreiner (m/w/d).] Wenn aktuell keine konkrete Stelle ausgeschrieben ist, Initiativbewerbungen ausdrücklich erwähnen.</p>
+        </div>
+        <div class="card">
+          <span class="legend">②</span>
+          <h3>Was wir bieten</h3>
+          <p>[z. B. abwechslungsreiche Projekte, internationale Einsätze, eingespieltes Team, kurze Entscheidungswege, faire Bezahlung.]</p>
+        </div>
+        <div class="card">
+          <span class="legend">③</span>
+          <h3>Bewerbung</h3>
+          <p>Senden Sie Ihre Unterlagen per E-Mail an <a href="mailto:info@ebbing-project.de" style="color:var(--brass);">info@ebbing-project.de</a> oder nutzen Sie das Kontaktformular unten – Stichwort „Bewerbung“.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section class="dark" id="kontakt">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="tag">06 — KONTAKT</span>
+        <h2>Schreiben Sie uns – rufen Sie an</h2>
+        <p>Wir freuen uns auf Ihre Anfrage – ob Konzept, Projektanfrage oder Bewerbung.</p>
+      </div>
+      <div class="contact-grid">
+        <address>
+          <strong>Ebbing Project GmbH</strong><br>
+          Marienthaler Straße 44a<br>
+          46348 Raesfeld-Erle<br>
+          Deutschland<br><br>
+          E-Mail: <a href="mailto:info@ebbing-project.de">info@ebbing-project.de</a><br>
+          Telefon: <a href="tel:+4928652509851">+49 (0) 2865 250 9851</a><br>
+          Mobil: <a href="tel:+4917155141 22">+49 (0) 171 551 41 22</a>
+        </address>
+        <form aria-label="Kontaktformular" onsubmit="event.preventDefault(); alert('Demo-Formular – in Wix mit echtem Formular-Element verbinden.');">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div>
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div>
+            <label for="anliegen">Anliegen</label>
+            <select id="anliegen" name="anliegen">
+              <option>Projektanfrage</option>
+              <option>Bewerbung</option>
+              <option>Sonstiges</option>
+            </select>
+          </div>
+          <div>
+            <label for="nachricht">Nachricht</label>
+            <textarea id="nachricht" name="nachricht" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="cursor:pointer;">Nachricht senden</button>
+          <p class="form-note">Demo-Formular zur Vorschau. In Wix bitte das native Formular-Element verwenden, damit Anfragen ankommen.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="brand" style="margin-bottom:1rem;">EBBING <span>PROJECT</span></div>
+      <p style="max-width:32ch; color:var(--concrete);">Generalunternehmer Ladenbau – Räume nach individuellen Marken-, Handels- und Unternehmenskonzepten.</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#privacy" onclick="document.getElementById('privacy').hidden=false; document.getElementById('imprint').hidden=true; window.scrollTo(0,document.body.scrollHeight);">Datenschutz</a></li>
+      <li><a href="#imprint" onclick="document.getElementById('imprint').hidden=false; document.getElementById('privacy').hidden=true; window.scrollTo(0,document.body.scrollHeight);">Impressum</a></li>
+      <li><a href="https://www.xing.com/profile/Joerg_Ebbing?sc_o=mxb_p" target="_blank" rel="noopener">Xing</a></li>
+      <li><a href="https://www.linkedin.com/in/j%C3%B6rg-ebbing-852a09b0" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Ebbing Project GmbH</span>
+    <span>Raesfeld-Erle · Germany</span>
+  </div>
+</footer>
+
+<!-- IMPRESSUM (toggle) -->
+<section class="legal" id="imprint" hidden>
+  <h2>Impressum</h2>
+  <p><strong>Angaben gemäß § 5 TMG</strong></p>
+  <p>
+    Ebbing Project GmbH<br>
+    Marienthaler Straße 44a<br>
+    D-46348 Raesfeld-Erle<br>
+    Telefon: +49 (0) 2865 250 9851<br>
+    E-Mail: info@ebbing-project.de<br>
+    Internet: www.ebbing-project.de
+  </p>
+  <h3>Unternehmensdaten</h3>
+  <p>
+    Generalunternehmer Ladenbau<br>
+    Sitz: Raesfeld<br>
+    Amtsgericht Coesfeld, HRB 16101<br>
+    Geschäftsführer: Jörg Ebbing<br>
+    USt.-IdNr.: DE296968284
+  </p>
+  <h3>Haftung für Inhalte</h3>
+  <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine Haftung ist erst ab Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden entsprechender Rechtsverletzungen werden diese Inhalte umgehend entfernt.</p>
+  <h3>Haftung für Links</h3>
+  <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich. Bei Bekanntwerden von Rechtsverletzungen werden derartige Links umgehend entfernt.</p>
+  <h3>Urheberrecht</h3>
+  <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Erstellers. Inhalte Dritter werden als solche gekennzeichnet; bei Hinweisen auf Urheberrechtsverletzungen werden betroffene Inhalte umgehend entfernt.</p>
+</section>
+
+<!-- DATENSCHUTZ (toggle) -->
+<section class="legal" id="privacy" hidden>
+  <h2>Datenschutzerklärung</h2>
+  <p><em>Hinweis: Dies ist ein Textentwurf als Ausgangspunkt. Bitte vor Veröffentlichung von einem Rechtsbeistand prüfen lassen und an die tatsächlich eingesetzten Wix-Tools (Cookies, Analytics, Formular-Anbieter) anpassen.</em></p>
+
+  <h3>1. Verantwortlicher</h3>
+  <p>Ebbing Project GmbH, Marienthaler Straße 44a, 46348 Raesfeld-Erle, E-Mail: info@ebbing-project.de</p>
+
+  <h3>2. Erhebung und Speicherung personenbezogener Daten</h3>
+  <p>Beim Besuch unserer Website erfasst unser Hosting-Anbieter (Wix.com) automatisch Informationen in sogenannten Server-Log-Dateien, die Ihr Browser automatisch übermittelt (z. B. IP-Adresse, Datum und Uhrzeit der Anfrage, Browsertyp, verwendetes Betriebssystem, Referrer-URL). Diese Daten sind nicht bestimmten Personen zuordenbar und werden nicht mit anderen Datenquellen zusammengeführt.</p>
+
+  <h3>3. Kontaktaufnahme</h3>
+  <p>Wenn Sie uns per Kontaktformular oder E-Mail Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zur Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b bzw. f DSGVO.</p>
+
+  <h3>4. Cookies und Wix-Dienste</h3>
+  <p>Diese Website wird mit Wix.com erstellt und gehostet. Wix kann technisch notwendige sowie ggf. Statistik- und Marketing-Cookies einsetzen. [Hier bitte das tatsächlich verwendete Cookie-Banner und die genauen Dienste (z. B. Wix Analytics, Google Analytics, Facebook Pixel) ergänzen, sofern eingesetzt, inkl. Einwilligungsmechanismus.]</p>
+
+  <h3>5. Ihre Rechte</h3>
+  <p>Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten. Wenden Sie sich hierzu an die oben genannte Kontaktadresse. Ihnen steht außerdem ein Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde zu.</p>
+
+  <h3>6. SSL-/TLS-Verschlüsselung</h3>
+  <p>Diese Seite nutzt aus Sicherheitsgründen eine SSL-/TLS-Verschlüsselung für die Übertragung vertraulicher Inhalte.</p>
+</section>
+
+</body>
+</html>
